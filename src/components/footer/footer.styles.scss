@@ -1,0 +1,13 @@
+@import '../../colors.scss';
+
+.footer-comtainer {
+    background-color: $black;
+    color: $aero;
+    text-align: center;
+    margin: 0;
+
+    p {
+        margin: 0;
+        padding: 20px;
+    }
+}

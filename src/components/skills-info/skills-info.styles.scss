@@ -1,0 +1,49 @@
+@import '../../colors.scss';
+
+.skills-info-container {
+    margin-block: 50px;
+    display: flex;
+    flex-direction: column;
+
+    .group-skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 2.5rem;
+            color: $black;
+        }
+
+        .skills-icons-container {
+            margin-block: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            column-gap: 50px;
+            row-gap: 50px;
+            padding-inline: 20px;
+
+            .icon-container {
+                width: 80px;
+                height: auto;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+
+                p {
+                    text-align: center;
+                    color: $khaki;
+                }
+            }
+
+            .icon-container:hover {
+                transform: scale(1.5);
+
+                p {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

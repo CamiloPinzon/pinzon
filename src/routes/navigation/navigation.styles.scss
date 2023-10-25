@@ -1,0 +1,26 @@
+@import '../../colors.scss';
+
+.navigation-container {
+    background-color: $black;
+    padding: 30px 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+
+    .link-item {
+        margin-inline: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        padding-bottom: 5px;
+        transition: all .2s ease-in;
+    }
+
+    .link-item:hover,
+    .link-item:active,
+    .link-item:focus {
+        color: $aero;
+        border-bottom: 3px solid $aero;
+    }
+}
