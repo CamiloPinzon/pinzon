@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132.986" height="97.028" viewBox="0 0 132.986 97.028">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #de0108;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-linecap: round;
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        stroke: #de0108;
+        stroke-width: 6px;
+      }
+
+      .cls-4 {
+        fill: #505055;
+        font-size: 30px;
+      }
+
+      .cls-4, .cls-7 {
+        font-family: FSElliotPro, FS Elliot Pro;
+      }
+
+      .cls-5 {
+        font-family: FSElliotPro-Bold, FS Elliot Pro;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        fill: #1b1b1b;
+        font-size: 12px;
+        font-family: FSElliotPro-Light, FS Elliot Pro;
+        font-weight: 300;
+      }
+
+      .cls-7 {
+        font-weight: 400;
+      }
+    </style>
+  </defs>
+  <g id="Group_703" data-name="Group 703" transform="translate(-122.007 -61.026)">
+    <g id="logo-mycrew" transform="translate(121.007 60.738)">
+      <path id="Path_1569" data-name="Path 1569" class="cls-1" d="M308.364,354.666a39.2,39.2,0,0,1,11.575,15.239,2.152,2.152,0,0,1,.057.223h-.563l-58.1.014a17.374,17.374,0,0,1-9.556-5.2c-5.086-5.231-4.678-7.2-5.5-9.71" transform="translate(-186.652 -321.204)"/>
+      <path id="Path_1570" data-name="Path 1570" class="cls-1" d="M184.787,283.479c3.408.8,13.441,5.685,17.946,15.578.031.062-39.641.233-59.207.237l-15.951,0a20.406,20.406,0,0,1-12.2-5.209c-5.223-5.43-5.677-9.169-6.734-11.713" transform="translate(-80.792 -265.476)"/>
+      <path id="Path_1571" data-name="Path 1571" class="cls-1" d="M-7.652,206.725c.526,1.459,1.269,5.784,3.963,8.841a23.643,23.643,0,0,0,6.842,5.284,20.515,20.515,0,0,0,8.155,2.985c.067,0,74.739-.163,74.739-.163-1.821-4.284-3.918-13.481-14.264-16.893-2.1-.585-59.326-.206-79.434-.054-4.261.032-5.591,0-5.591,0" transform="translate(17.755 -205.662)"/>
+      <ellipse id="Ellipse_30" data-name="Ellipse 30" class="cls-2" cx="3.617" cy="3.617" rx="3.617" ry="3.617" transform="translate(1 1)"/>
+      <path id="Path_1572" data-name="Path 1572" class="cls-3" d="M7,8" transform="translate(96.091 12.454)"/>
+    </g>
+    <text id="MyCrew" class="cls-4" transform="translate(126.504 141.652)"><tspan x="0" y="0">My</tspan><tspan class="cls-5" y="0">Crew</tspan></text>
+    <text id="by_Avianca" data-name="by Avianca" class="cls-6" transform="translate(187.553 155.054)"><tspan x="0" y="0">by</tspan><tspan class="cls-7" y="0" xml:space="preserve"> Avianca</tspan></text>
+  </g>
+</svg>

@@ -1,13 +1,5 @@
-import { ReactComponent as SassIcon } from "../../assets/img/sass.svg";
-import { ReactComponent as TSIcon } from "../../assets/img/ts.svg";
-import { ReactComponent as ReactIcon } from "../../assets/img/react.svg";
-import { ReactComponent as JSIcon } from "../../assets/img/javascript.svg";
-import { ReactComponent as HtmlIcon } from "../../assets/img/html.svg";
-import { ReactComponent as CssIcon } from "../../assets/img/css.svg";
-import { ReactComponent as AngularIcon } from "../../assets/img/angular.svg";
-import { ReactComponent as NodeIcon } from "../../assets/img/node.svg";
-import { ReactComponent as ExpressIcon } from "../../assets/img/express.svg";
-import { ReactComponent as MongoIcon } from "../../assets/img/mongo.svg";
+import { LogosT, getLogo } from "../../utils/icons.utils";
+
 import "./skills-info.styles.scss";
 
 const SkillsInfo = () => {
@@ -17,27 +9,27 @@ const SkillsInfo = () => {
 				<h2>Technical Stack</h2>
 				<div className="skills-icons-container">
 					<div className="icon-container">
-						<JSIcon />
+						{getLogo(LogosT.JS_ICON, 80)}
 						<p>JavaScript</p>
 					</div>
 					<div className="icon-container">
-						<ReactIcon />
+						{getLogo(LogosT.REACT_ICON, 80)}
 						<p>React JS</p>
 					</div>
 					<div className="icon-container">
-						<TSIcon />
+						{getLogo(LogosT.TS_ICON, 80)}
 						<p>TypeScript</p>
 					</div>
 					<div className="icon-container">
-						<SassIcon />
+						{getLogo(LogosT.SASS_LOGO, 80)}
 						<p>Sass</p>
 					</div>
 					<div className="icon-container">
-						<HtmlIcon />
+						{getLogo(LogosT.HTML_ICON, 80)}
 						<p>HTML</p>
 					</div>
 					<div className="icon-container">
-						<CssIcon />
+						{getLogo(LogosT.CSS_ICON, 80)}
 						<p>CSS</p>
 					</div>
 				</div>
@@ -46,23 +38,23 @@ const SkillsInfo = () => {
 				<h2>Comming soon...</h2>
 				<div className="skills-icons-container">
 					<div className="icon-container">
-						<ReactIcon />
+						{getLogo(LogosT.REACT_ICON, 80)}
 						<p>React Native</p>
 					</div>
 					<div className="icon-container">
-						<AngularIcon />
+						{getLogo(LogosT.ANGULAR_ICON, 80)}
 						<p>Angular</p>
 					</div>
 					<div className="icon-container">
-						<NodeIcon />
+						{getLogo(LogosT.NODE_ICON, 80)}
 						<p>Node JS</p>
 					</div>
 					<div className="icon-container">
-						<ExpressIcon />
+						{getLogo(LogosT.EXPRESS_ICON, 80)}
 						<p>Express</p>
 					</div>
 					<div className="icon-container">
-						<MongoIcon />
+						{getLogo(LogosT.MONGO_ICON, 80)}
 						<p>Mongo DB</p>
 					</div>
 				</div>
