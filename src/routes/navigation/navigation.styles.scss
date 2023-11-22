@@ -5,8 +5,11 @@
     padding: 30px 50px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 
     .link-item {
         margin-inline: 10px;
@@ -18,8 +21,7 @@
     }
 
     .link-item:hover,
-    .link-item:active,
-    .link-item:focus {
+    .link-item.active {
         color: $aero;
         border-bottom: 3px solid $aero;
     }

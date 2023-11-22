@@ -18,6 +18,8 @@ import { ReactComponent as AngularIcon } from "../assets/img/angular.svg";
 import { ReactComponent as NodeIcon } from "../assets/img/node.svg";
 import { ReactComponent as ExpressIcon } from "../assets/img/express.svg";
 import { ReactComponent as MongoIcon } from "../assets/img/mongo.svg";
+import { ReactComponent as GitHubIcon } from "../assets/img/github.svg";
+import LeetCodeLogo from "../assets/img/LeetCode_logo_rvs.png";
 
 export const LogosT = {
 	GPAY_LOGO: "GPAY_LOGO",
@@ -40,6 +42,8 @@ export const LogosT = {
 	NODE_ICON: "NODE_ICON",
 	EXPRESS_ICON: "EXPRESS_ICON",
 	MONGO_ICON: "MONGO_ICON",
+	GITHUB_ICON: "GITHUB_ICON",
+	LEETCODE_ICON: "LEETCODE_ICON",
 };
 
 export const getLogo = (logo, width) => {
@@ -84,6 +88,10 @@ export const getLogo = (logo, width) => {
 			return getExpressIcon(width);
 		case LogosT.MONGO_ICON:
 			return getMongoIcon(width);
+		case LogosT.GITHUB_ICON:
+			return getGitHubIcon(width);
+		case LogosT.LEETCODE_ICON:
+			return getLeetCodeLogo(width);
 		default:
 			console.error("The chosen logo not exist");
 			break;
@@ -126,3 +134,8 @@ const getAngularIcon = (width) => <AngularIcon width={width} />;
 const getNodeIcon = (width) => <NodeIcon width={width} />;
 const getExpressIcon = (width) => <ExpressIcon width={width} />;
 const getMongoIcon = (width) => <MongoIcon width={width} />;
+const getGitHubIcon = (width) => <GitHubIcon width={width} />;
+
+const getLeetCodeLogo = (width) => (
+	<img src={LeetCodeLogo} alt="Leetcode logo" width={width} />
+);

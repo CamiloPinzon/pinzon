@@ -5,14 +5,8 @@
     flex-direction: column;
     align-items: center;
 
-    h1 {
-        text-align: center;
-        font-size: 3rem;
-        color: $black;
-        margin-bottom: 50px;
-    }
-
     .work-items-container {
         max-width: 900px;
+        margin-bottom: 50px;
     }
 }
