@@ -28,10 +28,12 @@ const PillPage = () => {
 				dispatch(setSelectedPills(getPills(PILLS_ACTION_TYPES.CATEGORY_REACT)));
 				break;
 			case "JS":
-				dispatch(setSelectedPills(PILLS_ACTION_TYPES.CATEGORY_JAVASCRIPT));
+				dispatch(
+					setSelectedPills(getPills(PILLS_ACTION_TYPES.CATEGORY_JAVASCRIPT))
+				);
 				break;
 			case "CSS":
-				dispatch(setSelectedPills(PILLS_ACTION_TYPES.CATEGORY_CSS));
+				dispatch(setSelectedPills(getPills(PILLS_ACTION_TYPES.CATEGORY_CSS)));
 				break;
 			default:
 				break;
@@ -40,12 +42,12 @@ const PillPage = () => {
 
 	const pillSelected = category.find((pill) => pill.id === pillId);
 	dispatch(setSelectedPill(pillSelected));
-	const { title, content } = useSelector(selectSelectedPill);
+	const selected = useSelector(selectSelectedPill);
 
 	return (
 		<div className="pill-container">
-			<h2>{title}</h2>
-			<div dangerouslySetInnerHTML={{ __html: content }}></div>
+			<h2>{selected.title}</h2>
+			<div dangerouslySetInnerHTML={{ __html: selected.content }}></div>
 		</div>
 	);
 };

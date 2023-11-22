@@ -1,12 +1,21 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { selectSelectedCategory } from "../../store/pills/pills.selector";
+import { setSelectedPills } from "../../store/pills/pills.actions";
+import getPills from "../../utils/pills.utils";
 
 import "./category-preview-page.styles.scss";
 
 const CategoryPreviewPage = () => {
+	const dispatch = useDispatch();
+	const path = useParams();
 	const category = useSelector(selectSelectedCategory);
+	if (category.length < 1) {
+		const cat = path.category.toUpperCase();
+		dispatch(setSelectedPills(getPills(cat)));
+	}
 	return (
 		<div>
 			{category.map(({ id, title, preview_content }) => (
