@@ -21,7 +21,11 @@ const PillsPreview = () => {
 
 	return (
 		<main className="pills-container">
-			<SectionTitle>Useful tips for the day by day</SectionTitle>
+			<SectionTitle>
+				Useful tips to learn
+				<br />
+				and apply to your project
+			</SectionTitle>
 			<div className="pills_sections_container">
 				{pills_categories.map(({ id, title, icon }) => (
 					<div

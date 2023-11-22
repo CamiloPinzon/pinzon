@@ -10,7 +10,7 @@ import {
 import { PILLS_ACTION_TYPES } from "../../store/pills/pills.types";
 import getPills from "../../utils/pills.utils";
 
-import "./pill-page.styles";
+import "./pill-page.styles.scss";
 
 const PillPage = () => {
 	const dispatch = useDispatch();

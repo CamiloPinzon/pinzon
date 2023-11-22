@@ -17,12 +17,12 @@ const CategoryPreviewPage = () => {
 		dispatch(setSelectedPills(getPills(cat)));
 	}
 	return (
-		<div>
+		<div className="pills-container">
 			{category.map(({ id, title, preview_content }) => (
 				<div className="pill_preview_container" key={id}>
 					<h2>{title}</h2>
 					<div dangerouslySetInnerHTML={{ __html: preview_content }}></div>
-					<Link to={`pill=${id}`}>More...</Link>
+					<Link to={`pill=${id}`}>Read more...</Link>
 				</div>
 			))}
 		</div>
