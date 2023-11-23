@@ -1,65 +1,70 @@
 import { LogosT, getLogo } from "../../utils/icons.utils";
 
-import "./skills-info.styles.scss";
+import {
+	SkillsInfoContainer,
+	GroupSkillsContainer,
+	SkillsIconsContainer,
+	IconContainer,
+} from "./skills-info.styles.jsx";
 
 const SkillsInfo = () => {
 	return (
-		<section className="skills-info-container">
-			<div className="group-skills-container">
+		<SkillsInfoContainer>
+			<GroupSkillsContainer>
 				<h2>Technical Stack</h2>
-				<div className="skills-icons-container">
-					<div className="icon-container">
+				<SkillsIconsContainer>
+					<IconContainer>
 						{getLogo(LogosT.JS_ICON, 80)}
 						<p>JavaScript</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.REACT_ICON, 80)}
 						<p>React JS</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.TS_ICON, 80)}
 						<p>TypeScript</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.SASS_LOGO, 80)}
 						<p>Sass</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.HTML_ICON, 80)}
 						<p>HTML</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.CSS_ICON, 80)}
 						<p>CSS</p>
-					</div>
-				</div>
-			</div>
-			<div className="group-skills-container">
+					</IconContainer>
+				</SkillsIconsContainer>
+			</GroupSkillsContainer>
+			<GroupSkillsContainer>
 				<h2>Comming soon...</h2>
-				<div className="skills-icons-container">
-					<div className="icon-container">
+				<SkillsIconsContainer>
+					<IconContainer>
 						{getLogo(LogosT.REACT_ICON, 80)}
 						<p>React Native</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.ANGULAR_ICON, 80)}
 						<p>Angular</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.NODE_ICON, 80)}
 						<p>Node JS</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.EXPRESS_ICON, 80)}
 						<p>Express</p>
-					</div>
-					<div className="icon-container">
+					</IconContainer>
+					<IconContainer>
 						{getLogo(LogosT.MONGO_ICON, 80)}
 						<p>Mongo DB</p>
-					</div>
-				</div>
-			</div>
-		</section>
+					</IconContainer>
+				</SkillsIconsContainer>
+			</GroupSkillsContainer>
+		</SkillsInfoContainer>
 	);
 };
 

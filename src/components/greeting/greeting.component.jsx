@@ -1,12 +1,12 @@
-import "./greeting.styles.scss";
+import { GreetingContainer } from "./greeting.styles.jsx";
 
 const Greeting = () => {
 	return (
-		<h1 className="greeting-container">
+		<GreetingContainer>
 			Hi there!
 			<br />
 			I'm Camilo Pinz&oacute;n
-		</h1>
+		</GreetingContainer>
 	);
 };
 

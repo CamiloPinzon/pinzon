@@ -7,7 +7,10 @@ import SectionTitle from "../section-title/section-title.component";
 import getPills from "../../utils/pills.utils";
 import { getLogo } from "../../utils/icons.utils";
 
-import "./pills-preview.styles.scss";
+import {
+	PillsSectionsContainer,
+	PillSection,
+} from "./pills-preview.styles.jsx";
 
 const PillsPreview = () => {
 	const dispatch = useDispatch();
@@ -26,18 +29,14 @@ const PillsPreview = () => {
 				<br />
 				and apply to your project
 			</SectionTitle>
-			<div className="pills_sections_container">
+			<PillsSectionsContainer>
 				{pills_categories.map(({ id, title, icon }) => (
-					<div
-						key={id}
-						className="pill_section"
-						onClick={() => selectHandler(title)}
-					>
+					<PillSection key={id} onClick={() => selectHandler(title)}>
 						<div className="pill_icon">{getLogo(icon, 100)}</div>
 						<p className="pill_title">{title}</p>
-					</div>
+					</PillSection>
 				))}
-			</div>
+			</PillsSectionsContainer>
 		</main>
 	);
 };

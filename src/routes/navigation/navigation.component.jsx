@@ -1,30 +1,30 @@
 import { Outlet, NavLink } from "react-router-dom";
 import Footer from "../../components/footer/footer.component";
 
-import "./navigation.styles.scss";
+import { NavigationContainer, LinkItem } from "./navigation.styles.jsx";
 
 const Navigation = () => {
 	return (
 		<>
-			<div className="navigation-container" role="menu">
+			<NavigationContainer role="menu">
 				<NavLink to="/" role="menuitem">
-					<div className="link-item">CP</div>
+					CP
 				</NavLink>
 				<div className="links-container">
-					<NavLink to="/" className="link-item" role="menuitem">
+					<LinkItem to="/" role="menuitem">
 						Home
-					</NavLink>
-					<NavLink to="work" className="link-item" role="menuitem">
+					</LinkItem>
+					<LinkItem to="work" role="menuitem">
 						Work
-					</NavLink>
-					<NavLink to="pills" className="link-item" role="menuitem">
+					</LinkItem>
+					<LinkItem to="pills" role="menuitem">
 						Pills
-					</NavLink>
-					<NavLink to="contact" className="link-item" role="menuitem">
+					</LinkItem>
+					<LinkItem to="contact" role="menuitem">
 						Contact
-					</NavLink>
+					</LinkItem>
 				</div>
-			</div>
+			</NavigationContainer>
 			<Outlet />
 			<Footer />
 		</>

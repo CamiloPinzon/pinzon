@@ -6,7 +6,10 @@ import { selectSelectedCategory } from "../../store/pills/pills.selector";
 import { setSelectedPills } from "../../store/pills/pills.actions";
 import getPills from "../../utils/pills.utils";
 
-import "./category-preview-page.styles.scss";
+import {
+	PillsContainer,
+	PillPreviewContainer,
+} from "./category-preview-page.styles.jsx";
 
 const CategoryPreviewPage = () => {
 	const dispatch = useDispatch();
@@ -17,15 +20,15 @@ const CategoryPreviewPage = () => {
 		dispatch(setSelectedPills(getPills(cat)));
 	}
 	return (
-		<div className="pills-container">
+		<PillsContainer>
 			{category.map(({ id, title, preview_content }) => (
-				<div className="pill_preview_container" key={id}>
+				<PillPreviewContainer key={id}>
 					<h2>{title}</h2>
 					<div dangerouslySetInnerHTML={{ __html: preview_content }}></div>
 					<Link to={`pill=${id}`}>Read more...</Link>
-				</div>
+				</PillPreviewContainer>
 			))}
-		</div>
+		</PillsContainer>
 	);
 };
 

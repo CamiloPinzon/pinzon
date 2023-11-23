@@ -3,8 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import CategoryPreviewPage from "../category-preview/category-preview-page.component";
 import PillPage from "../pill/pill-page.content";
 
-import "./category-page.styles.scss";
-
 const CategoryPage = () => {
 	return (
 		<Routes>

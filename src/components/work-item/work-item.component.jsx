@@ -2,15 +2,20 @@ import { Link } from "react-router-dom";
 
 import { LogosT, getLogo } from "../../utils/icons.utils";
 
-import "./work-item.styles.scss";
+import {
+	WorkItemContainer,
+	WorkItemContent,
+	WorkLogosContainer,
+	WorkDescriptionContainer,
+} from "./work-item.styles.jsx";
 
 const WorkItem = ({ item }) => {
 	const { title, logos, content } = item;
 	return (
-		<div className="work-item">
+		<WorkItemContainer>
 			<h2>{title}</h2>
-			<div className="work-item-content">
-				<div className="work-logos-container">
+			<WorkItemContent>
+				<WorkLogosContainer>
 					{logos.map((logo, idx) => {
 						return (
 							<Link to={logo.link} target="_blank" key={idx}>
@@ -18,12 +23,12 @@ const WorkItem = ({ item }) => {
 							</Link>
 						);
 					})}
-				</div>
-				<div className="work-description-container">
+				</WorkLogosContainer>
+				<WorkDescriptionContainer>
 					<p>{content}</p>
-				</div>
-			</div>
-		</div>
+				</WorkDescriptionContainer>
+			</WorkItemContent>
+		</WorkItemContainer>
 	);
 };
 

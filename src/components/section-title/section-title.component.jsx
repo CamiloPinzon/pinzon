@@ -1,7 +1,7 @@
-import "./section-title.styles.scss";
+import { SectionTitleContainer } from "./section-title.styles.jsx";
 
 const SectionTitle = ({ children }) => (
-	<h1 className="section-title">{children}</h1>
+	<SectionTitleContainer>{children}</SectionTitleContainer>
 );
 
 export default SectionTitle;

@@ -10,7 +10,7 @@ import {
 import { PILLS_ACTION_TYPES } from "../../store/pills/pills.types";
 import getPills from "../../utils/pills.utils";
 
-import "./pill-page.styles.scss";
+import { PillContainer } from "./pill-page.styles.jsx";
 
 const PillPage = () => {
 	const dispatch = useDispatch();
@@ -45,10 +45,10 @@ const PillPage = () => {
 	const selected = useSelector(selectSelectedPill);
 
 	return (
-		<div className="pill-container">
+		<PillContainer>
 			<h2>{selected.title}</h2>
 			<div dangerouslySetInnerHTML={{ __html: selected.content }}></div>
-		</div>
+		</PillContainer>
 	);
 };
 

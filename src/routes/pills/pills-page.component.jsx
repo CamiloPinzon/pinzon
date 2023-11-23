@@ -6,7 +6,6 @@ import CategoryPage from "../category/category-page.component";
 import { setCategories } from "../../store/pills/pills.actions";
 
 import { PILLS_SECTIONS } from "../../data/pills";
-import "./pills-page.styles.scss";
 
 const PillsPage = () => {
 	const dispatch = useDispatch();
