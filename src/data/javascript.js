@@ -19,7 +19,7 @@ export const JavascripPills = [
 		<picture style="display: flex; justify-content: center; align-items: center">
 			<img src="${
 				process.env.PUBLIC_URL + "/images/js-engine.webp"
-			}" alt="Js Engine" style="width: 100%; max-width: 500px" />
+			}" alt="Js Engine" width="500" height="auto" style="width: 100%; max-width: 500px" loading="lazy" />
 		</picture>
 		<p>
 			All engines can change in the way their work, but those are minimal changes, the basic functioning it's the same

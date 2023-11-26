@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { khaki, black } from "../../colors";
 
 export const PillsSectionsContainer = styled.div`
 	display: flex;
@@ -15,8 +16,10 @@ export const PillSection = styled.div`
 	align-items: center;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
+	color: ${khaki};
 
-	&hover {
+	&:hover {
 		transform: scale(1.5);
+		color: ${black};
 	}
 `;

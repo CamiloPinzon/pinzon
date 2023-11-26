@@ -16,6 +16,7 @@ const Footer = () => {
 					to="https://github.com/CamiloPinzon"
 					target="_blank"
 					rel="noreferer"
+					aria-label="Visit my github profile"
 				>
 					<SocialItem>{getLogo(LogosT.GITHUB_ICON, 50)}</SocialItem>
 				</Link>
@@ -23,6 +24,7 @@ const Footer = () => {
 					to="https://leetcode.com/pinzonac/"
 					target="_blank"
 					rel="noreferer"
+					aria-label="Visit my leetcode profile"
 				>
 					<FixLeet>{getLogo(LogosT.LEETCODE_ICON, 50)}</FixLeet>
 				</Link>

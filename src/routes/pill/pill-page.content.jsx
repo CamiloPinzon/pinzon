@@ -42,12 +42,12 @@ const PillPage = () => {
 
 	const pillSelected = category.find((pill) => pill.id === pillId);
 	dispatch(setSelectedPill(pillSelected));
-	const selected = useSelector(selectSelectedPill);
+	const { title = "", content = "" } = useSelector(selectSelectedPill);
 
 	return (
 		<PillContainer>
-			<h2>{selected.title}</h2>
-			<div dangerouslySetInnerHTML={{ __html: selected.content }}></div>
+			<h2>{title}</h2>
+			<div dangerouslySetInnerHTML={{ __html: content }}></div>
 		</PillContainer>
 	);
 };

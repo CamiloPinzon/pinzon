@@ -11,6 +11,9 @@ export const ButtonContainer = styled.div`
 	transition: all 0.2s ease-in;
 	border: none;
 	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&hover {
 		transform: scale(1.01);

@@ -1,0 +1,10 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+
+    .form-container {
+        padding-block-end: 50px;
+    }
+}

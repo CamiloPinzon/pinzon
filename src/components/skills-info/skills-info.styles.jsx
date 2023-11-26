@@ -12,7 +12,7 @@ export const GroupSkillsContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	&h2 {
+	h2 {
 		font-size: 2.5rem;
 		color: $black;
 	}
@@ -33,12 +33,12 @@ export const IconContainer = styled.div`
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 
-	&p {
+	p {
 		text-align: center;
 		color: ${khaki};
 	}
 
-	&hover {
+	&:hover {
 		transform: scale(1.5);
 
 		p {

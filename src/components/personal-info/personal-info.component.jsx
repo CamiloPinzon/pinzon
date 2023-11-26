@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../button/button.component";
 import ProfilePicSrc from "../../assets/img/profile-pic.webp";
 import {
@@ -8,6 +9,10 @@ import {
 } from "./personal-info.styles.jsx";
 
 const PersonalInfo = () => {
+	const navigate = useNavigate();
+	const handleClick = () => {
+		navigate(`/contact`);
+	};
 	return (
 		<PersonalInfoContainer role="main">
 			<ProfilePic src={ProfilePicSrc} alt="profile pic" loading="lazy" />
@@ -20,7 +25,7 @@ const PersonalInfo = () => {
 					brings calm to the customer.
 				</BioContent>
 				<div>
-					<Button route="/contact">Contact me</Button>
+					<Button handleClick={handleClick}>Contact me</Button>
 				</div>
 			</BioContainer>
 		</PersonalInfoContainer>
