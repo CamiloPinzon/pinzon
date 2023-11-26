@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { black, aero } from "../../colors";
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.button`
 	background-color: ${aero};
 	color: ${black};
 	cursor: pointer;
@@ -14,6 +14,7 @@ export const ButtonContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 
 	&hover {
 		transform: scale(1.01);
