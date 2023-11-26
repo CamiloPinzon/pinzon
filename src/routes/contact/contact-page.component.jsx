@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import SectionTitle from "../../components/section-title/section-title.component";
 import FormInput from "../../components/formInput/form-input.component";
