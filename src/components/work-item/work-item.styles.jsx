@@ -15,7 +15,7 @@ export const WorkItemContainer = styled.div`
 
 export const WorkItemContent = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 	flex-wrap: wrap;
 	column-gap: 20px;
 	row-gap: 20px;
