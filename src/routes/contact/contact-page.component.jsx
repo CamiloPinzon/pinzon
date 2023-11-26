@@ -5,7 +5,7 @@ import FormInput from "../../components/formInput/form-input.component";
 import Button from "../../components/button/button.component";
 import { addContactMessage } from "../../utils/firebase/firebase.utils";
 
-import "./contact-page.styles.scss";
+import { ContactContainer, FormContainer } from "./contact-page.styles.jsx";
 
 const defaultFormFields = {
 	name: "",
@@ -28,9 +28,9 @@ const ContactPage = () => {
 		addContactMessage(formFields);
 	};
 	return (
-		<div className="contact-container">
+		<ContactContainer>
 			<SectionTitle>Let's work together, contact me!</SectionTitle>
-			<div className="form-container">
+			<FormContainer>
 				<form onSubmit={submitHandler}>
 					<FormInput
 						label={`Full name`}
@@ -58,8 +58,8 @@ const ContactPage = () => {
 					/>
 					<Button type="submit">Submit</Button>
 				</form>
-			</div>
-		</div>
+			</FormContainer>
+		</ContactContainer>
 	);
 };
 

@@ -4,6 +4,8 @@ import { black, aero } from "../../colors";
 
 export const WorkItemContainer = styled.div`
 	padding: 30px;
+	display: flex;
+	flex-direction: column;
 
 	h2 {
 		font-size: 2rem;
@@ -24,16 +26,15 @@ export const WorkItemContent = styled.div`
 export const WorkLogosContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	row-gap: 20px;
 	justify-content: center;
-	flex: 1 1;
-	column-gap: 20px;
+	flex: 1 1 auto;
+	gap: 20px;
 	flex-wrap: wrap;
 	align-items: center;
 `;
 
 export const WorkDescriptionContainer = styled.div`
-	flex: 1;
+	flex: 1 1 auto;
 
 	p {
 		font-size: 1.1rem;

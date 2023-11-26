@@ -7,6 +7,8 @@ export const WorkContainer = styled.div`
 `;
 
 export const WorkItemsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
 	max-width: 900px;
 	margin-bottom: 50px;
 `;
