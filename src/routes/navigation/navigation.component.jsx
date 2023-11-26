@@ -1,15 +1,28 @@
 import { Outlet, NavLink } from "react-router-dom";
 import Footer from "../../components/footer/footer.component";
 
-import { NavigationContainer, LinkItem } from "./navigation.styles.jsx";
+import {
+	NavigationContainer,
+	LinkItem,
+	Logo,
+	LogoIcon,
+} from "./navigation.styles.jsx";
 
 const Navigation = () => {
 	return (
 		<>
 			<NavigationContainer role="menu">
-				<NavLink to="/" role="menuitem">
-					CP
-				</NavLink>
+				<Logo>
+					<NavLink to="/" role="menuitem">
+						<LogoIcon>
+							<div>{`<`}</div>
+							<div>{`/`}</div>
+							<div>{`>`}</div>
+						</LogoIcon>
+						&nbsp;&nbsp;
+						<span className="logo-name">camilo pinzón</span>
+					</NavLink>
+				</Logo>
 				<div className="links-container">
 					<LinkItem to="/" role="menuitem">
 						Home

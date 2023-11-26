@@ -22,10 +22,27 @@ export const LinkItem = styled(NavLink)`
 	padding-bottom: 5px;
 	transition: all 0.2s ease-in;
 
-	&hover,
-	&active,
-	&focus {
+	&.active {
 		color: ${aero};
 		border-bottom: 3px solid ${aero};
 	}
+`;
+
+export const Logo = styled.div`
+	a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+`;
+
+export const LogoIcon = styled.div`
+	color: ${aero};
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 `;

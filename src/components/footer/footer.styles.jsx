@@ -7,6 +7,7 @@ export const FooterContainer = styled.div`
 	color: ${aero};
 	text-align: center;
 	margin: 0;
+	padding-bottom: 10px;
 
 	&p {
 		margin: 0;
