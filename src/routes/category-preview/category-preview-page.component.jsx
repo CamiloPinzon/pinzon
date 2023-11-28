@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { selectSelectedCategory } from "../../store/pills/pills.selector";
+import { selectLanguage } from "../../store/language/language.selector.jsx";
 import { setSelectedPills } from "../../store/pills/pills.actions";
-import getPills from "../../utils/pills.utils";
+import GetPills from "../../utils/pills.utils";
 
 import {
 	PillsContainer,
@@ -15,9 +16,10 @@ const CategoryPreviewPage = () => {
 	const dispatch = useDispatch();
 	const path = useParams();
 	const category = useSelector(selectSelectedCategory);
+	const language = useSelector(selectLanguage);
 	if (category.length < 1) {
 		const cat = path.category.toUpperCase();
-		dispatch(setSelectedPills(getPills(cat)));
+		dispatch(setSelectedPills(GetPills(cat, language)));
 	}
 	return (
 		<PillsContainer>

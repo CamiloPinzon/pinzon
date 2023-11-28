@@ -8,7 +8,6 @@ const HomePage = () => {
 			<Greeting />
 			<PersonalInfo />
 			<SkillsInfo />
-			<section className="section-container"></section>
 		</div>
 	);
 };

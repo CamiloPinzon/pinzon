@@ -1,4 +1,7 @@
 import { Outlet, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+import LanguageSelector from "../../components/language-selector/language-selector.component.jsx";
 import Footer from "../../components/footer/footer.component";
 
 import {
@@ -9,6 +12,7 @@ import {
 } from "./navigation.styles.jsx";
 
 const Navigation = () => {
+	const { t } = useTranslation();
 	return (
 		<>
 			<NavigationContainer role="menu">
@@ -25,17 +29,20 @@ const Navigation = () => {
 				</Logo>
 				<div className="links-container">
 					<LinkItem to="/" role="menuitem">
-						Home
+						{t("nav.home")}
 					</LinkItem>
 					<LinkItem to="work" role="menuitem">
-						Work
+						{t("nav.work")}
 					</LinkItem>
 					<LinkItem to="pills" role="menuitem">
-						Pills
+						{t("nav.pills")}
 					</LinkItem>
 					<LinkItem to="contact" role="menuitem">
-						Contact
+						{t("nav.contact")}
 					</LinkItem>
+				</div>
+				<div className="language-selector-container">
+					<LanguageSelector />
 				</div>
 			</NavigationContainer>
 			<Outlet />

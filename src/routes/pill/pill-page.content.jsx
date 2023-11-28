@@ -7,8 +7,9 @@ import {
 	selectSelectedCategory,
 	selectSelectedPill,
 } from "../../store/pills/pills.selector";
+import { selectLanguage } from "../../store/language/language.selector.jsx";
 import { PILLS_ACTION_TYPES } from "../../store/pills/pills.types";
-import getPills from "../../utils/pills.utils";
+import GetPills from "../../utils/pills.utils";
 
 import { PillContainer } from "./pill-page.styles.jsx";
 
@@ -21,19 +22,28 @@ const PillPage = () => {
 	);
 	const pillId = pill.substring(pill.indexOf("=") + 1);
 	const category = useSelector(selectSelectedCategory);
+	const language = useSelector(selectLanguage);
 
 	if (category.length < 1) {
 		switch (urlCategory) {
 			case "RT":
-				dispatch(setSelectedPills(getPills(PILLS_ACTION_TYPES.CATEGORY_REACT)));
+				dispatch(
+					setSelectedPills(
+						GetPills(PILLS_ACTION_TYPES.CATEGORY_REACT, language)
+					)
+				);
 				break;
 			case "JS":
 				dispatch(
-					setSelectedPills(getPills(PILLS_ACTION_TYPES.CATEGORY_JAVASCRIPT))
+					setSelectedPills(
+						GetPills(PILLS_ACTION_TYPES.CATEGORY_JAVASCRIPT, language)
+					)
 				);
 				break;
 			case "CSS":
-				dispatch(setSelectedPills(getPills(PILLS_ACTION_TYPES.CATEGORY_CSS)));
+				dispatch(
+					setSelectedPills(GetPills(PILLS_ACTION_TYPES.CATEGORY_CSS, language))
+				);
 				break;
 			default:
 				break;

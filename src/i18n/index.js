@@ -1,4 +1,4 @@
-import { i18n } from "i18next";
+import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import translationInEnglish from "../locales/en/translation.json";
@@ -13,7 +13,7 @@ const resources = {
 	},
 };
 
-i18n
+i18next
 	.use(initReactI18next) // passes i18n down to react-i18next
 	.init({
 		resources, // resources are important to load translations for the languages.
@@ -27,4 +27,4 @@ i18n
 		defaultNS: "translation",
 	});
 
-export default i18n;
+export default i18next;
