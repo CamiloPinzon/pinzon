@@ -21,6 +21,9 @@ export const addContactMessage = async (messageData) => {
 	const batch = writeBatch(db);
 	const docRef = doc(collectionRef);
 	batch.set(docRef, messageData);
-	await batch.commit();
-	console.log("saved data");
+	try {
+		await batch.commit();
+	} catch (error) {
+		console.log("saved data:", error);
+	}
 };

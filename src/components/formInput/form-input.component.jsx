@@ -1,11 +1,15 @@
-import "./form-input.styles.scss";
+import {
+	LabelContainer,
+	TextAreaField,
+	InputField,
+} from "./form-input.styles.jsx";
 
 const FormInput = ({ label, name, type, ...otherProps }) => {
 	return (
-		<div className="goup">
-			<label htmlFor={name}>{label}</label>
+		<>
+			<LabelContainer htmlFor={name}>{label}</LabelContainer>
 			{type === "textarea" ? (
-				<textarea
+				<TextAreaField
 					type={type}
 					name={name}
 					id={name}
@@ -14,9 +18,9 @@ const FormInput = ({ label, name, type, ...otherProps }) => {
 					cols="50"
 				/>
 			) : (
-				<input type={type} name={name} id={name} {...otherProps} />
+				<InputField type={type} name={name} id={name} {...otherProps} />
 			)}
-		</div>
+		</>
 	);
 };
 
