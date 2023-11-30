@@ -71,7 +71,7 @@ export const worksEn = [
 			},
 		],
 		content:
-			"Here I worked on projects like Avianca My Crew, a developed app on Angular. On this project my main function was to develop the view of some components being fidel with the original design. With Cineplanet site, optimize and change some react components was part of my functions and in Tribune, my main task was make some changes to currently existent functions and migrate some components on Html5 and JS to React Js.",
+			"Here I worked on projects like Avianca My Crew, an app developed on Angular. On this project my main function was to develop the view of some components being fidel with the original design. With Cineplanet site, optimize and change some react components was part of my functions and in Tribune, my main task was make some changes to currently existent functions and migrate some components on Html5 and JavaScript to React Js components.",
 	},
 ];
 
@@ -97,7 +97,7 @@ export const worksEs = [
 			},
 		],
 		content:
-			"Working on Huge Inc, GPay and Google Wallet was my asigned accounts, the main of my functions was to modify and create components for their pages, also load and admin content through their own CMS.",
+			"Trabajando en Huge Inc, GPay y Google Wallet fueron mis cuentas asignadas, mi tarea principal era la de crear y modificar componentes para sus páginas, también debiá cargar y administrar contenidos através de su propio CMS.",
 	},
 	{
 		id: 2,
@@ -120,7 +120,7 @@ export const worksEs = [
 			},
 		],
 		content:
-			"During my time here, I got put my hands on projects for Fabric Inc and Via Productions. My main tasks involved turning vanilla JavaScript functions into React.js components with TypeScript. Plus, I did perform some maintenance to legacy code.",
+			"Durante mi tiempo acá, puse mis manos en proyectos para Fabric Inc y Via Productions. Mi tarea principal era el pasar viejos componentes en vanilla JavaScript a componentes de React Js con TypeScript y hacer mantenimiento a código antiguo",
 	},
 	{
 		id: 3,
@@ -148,6 +148,6 @@ export const worksEs = [
 			},
 		],
 		content:
-			"Here I worked on projects like Avianca My Crew, a developed app on Angular. On this project my main function was to develop the view of some components being fidel with the original design. With Cineplanet site, optimize and change some react components was part of my functions and in Tribune, my main task was make some changes to currently existent functions and migrate some components on Html5 and JS to React Js.",
+			"Acá trabajé en proyectos como Avianca My Crew, una app desarrollada con Angular JS. En este proyecto mi principal función fue la de desarrollar la vista de angunos componentes, siendo fiel a los diseños. Con Cineplanet, debía optimizar y cambiar el funcionamiento de algunos componentes desarrollados en React. Con Tribune, mi tarea principal era la de realizar cambios en el funcionamiento de algunas funciones y migarar algunos componentes de html y JavaScript a ReactJs.",
 	},
 ];

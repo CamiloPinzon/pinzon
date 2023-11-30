@@ -1,4 +1,5 @@
 {
+    "current-files-language": "en",
     "nav": {
         "home": "Home",
         "work": "Work",
@@ -26,7 +27,8 @@
         "title": "Some of my work"
     },
     "pills":{
-        "title": "Useful tips to learn<br />and apply to your project"
+        "title": "Useful tips to learn and apply to your project",
+        "read-more": "Read more"
     },
     "contact": {
         "title":"Let's work together, contact me!",

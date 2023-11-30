@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -24,7 +25,7 @@ const PillPage = () => {
 	const category = useSelector(selectSelectedCategory);
 	const language = useSelector(selectLanguage);
 
-	if (category.length < 1) {
+	useEffect(() => {
 		switch (urlCategory) {
 			case "RT":
 				dispatch(
@@ -48,7 +49,7 @@ const PillPage = () => {
 			default:
 				break;
 		}
-	}
+	}, [dispatch, language, urlCategory]);
 
 	const pillSelected = category.find((pill) => pill.id === pillId);
 	dispatch(setSelectedPill(pillSelected));

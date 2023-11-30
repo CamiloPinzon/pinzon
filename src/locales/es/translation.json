@@ -1,4 +1,5 @@
 {
+    "current-files-language": "es",
     "nav": {
         "home": "Inicio",
         "work": "Trabajo",
@@ -26,10 +27,11 @@
         "title": "Algo de mi trabajo"
     },
     "pills":{
-        "title": "Tips útiles para aprender<br />y aplicar en tu proyecto"
+        "title": "Tips útiles para aprender y aplicar en tu proyecto",
+        "read-more": "Leer más"
     },
     "contact": {
-        "title":"Trabajemos juntos, ¡contáctame!",
+        "title":"Trabajemos juntos, ¡Contáctame!",
         "fullName": "Nombre completo",
         "email": "Correo electrónico",
         "message": "Mensaje",

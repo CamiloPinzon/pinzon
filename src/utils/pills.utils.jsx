@@ -18,8 +18,10 @@ const GetPills = (pills, language) => {
 
 const getReact = (language) =>
 	language === "en" ? ReactPillsEn : ReactPillsEs;
+
 const getJavaScript = (language) =>
 	language === "en" ? JavascripPillsEn : JavascripPillsEs;
+
 const getCss = (language) => (language === "en" ? CssPillsEn : CssPillsEs);
 
 export default GetPills;

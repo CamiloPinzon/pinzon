@@ -1,5 +1,6 @@
-import { LogosT, getLogo } from "../../utils/icons.utils";
+import { useTranslation } from "react-i18next";
 
+import { LogosT, getLogo } from "../../utils/icons.utils";
 import {
 	SkillsInfoContainer,
 	GroupSkillsContainer,
@@ -8,10 +9,11 @@ import {
 } from "./skills-info.styles.jsx";
 
 const SkillsInfo = () => {
+	const { t } = useTranslation();
 	return (
 		<SkillsInfoContainer>
 			<GroupSkillsContainer>
-				<h2>Technical Stack</h2>
+				<h2>{t("home.tech-stack.main-title")}</h2>
 				<SkillsIconsContainer>
 					<IconContainer>
 						{getLogo(LogosT.JS_ICON, 80)}
@@ -40,7 +42,7 @@ const SkillsInfo = () => {
 				</SkillsIconsContainer>
 			</GroupSkillsContainer>
 			<GroupSkillsContainer>
-				<h2>Comming soon...</h2>
+				<h2>{t("home.tech-stack.commign-title")}</h2>
 				<SkillsIconsContainer>
 					<IconContainer>
 						{getLogo(LogosT.REACT_ICON, 80)}

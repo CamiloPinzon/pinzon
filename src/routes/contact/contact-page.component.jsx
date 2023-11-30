@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import SectionTitle from "../../components/section-title/section-title.component";
 import FormInput from "../../components/formInput/form-input.component";
@@ -15,6 +16,7 @@ const defaultFormFields = {
 };
 
 const ContactPage = () => {
+	const { t } = useTranslation();
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { name, email, message } = formFields;
 
@@ -29,11 +31,11 @@ const ContactPage = () => {
 	};
 	return (
 		<ContactContainer>
-			<SectionTitle>Let's work together, contact me!</SectionTitle>
+			<SectionTitle>{t("contact.title")}</SectionTitle>
 			<FormContainer>
 				<form onSubmit={submitHandler}>
 					<FormInput
-						label={`Full name`}
+						label={t("contact.fullName")}
 						type={`text`}
 						name={`name`}
 						onChange={handleChange}
@@ -41,7 +43,7 @@ const ContactPage = () => {
 						required
 					/>
 					<FormInput
-						label={`Email`}
+						label={t("contact.email")}
 						type={`email`}
 						name={`email`}
 						onChange={handleChange}
@@ -49,14 +51,14 @@ const ContactPage = () => {
 						required
 					/>
 					<FormInput
-						label={`Message`}
+						label={t("contact.message")}
 						type={`textarea`}
 						name={`message`}
 						onChange={handleChange}
 						value={message}
 						required
 					/>
-					<Button type="submit">Submit</Button>
+					<Button type="submit">{t("contact.submit")}</Button>
 				</form>
 			</FormContainer>
 		</ContactContainer>

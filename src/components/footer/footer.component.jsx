@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import { LogosT, getLogo } from "../../utils/icons.utils";
 
 import {
@@ -9,6 +11,7 @@ import {
 } from "./footer.styles.jsx";
 
 const Footer = () => {
+	const { t } = useTranslation();
 	return (
 		<FooterContainer>
 			<SocialContainer>
@@ -29,7 +32,7 @@ const Footer = () => {
 					<FixLeet>{getLogo(LogosT.LEETCODE_ICON, 50)}</FixLeet>
 				</Link>
 			</SocialContainer>
-			<p>© Copyright. Design And Developed By Camilo Pinz&oacute;n</p>
+			<p>{t("footer.legal")}</p>
 		</FooterContainer>
 	);
 };

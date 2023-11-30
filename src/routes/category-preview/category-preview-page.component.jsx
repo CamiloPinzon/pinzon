@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { selectSelectedCategory } from "../../store/pills/pills.selector";
 import { selectLanguage } from "../../store/language/language.selector.jsx";
@@ -17,17 +19,20 @@ const CategoryPreviewPage = () => {
 	const path = useParams();
 	const category = useSelector(selectSelectedCategory);
 	const language = useSelector(selectLanguage);
-	if (category.length < 1) {
-		const cat = path.category.toUpperCase();
-		dispatch(setSelectedPills(GetPills(cat, language)));
-	}
+	const cat = path.category.toUpperCase();
+	useEffect(() => {
+		const pills = GetPills(cat, language);
+		dispatch(setSelectedPills(pills));
+		console.log(pills);
+	}, [cat, dispatch, language]);
+	const { t } = useTranslation();
 	return (
 		<PillsContainer>
 			{category.map(({ id, title, preview_content }) => (
 				<PillPreviewContainer key={id}>
 					<h2>{title}</h2>
 					<div dangerouslySetInnerHTML={{ __html: preview_content }}></div>
-					<Link to={`pill=${id}`}>Read more...</Link>
+					<Link to={`pill=${id}`}>{t("pills.read-more")}...</Link>
 				</PillPreviewContainer>
 			))}
 		</PillsContainer>

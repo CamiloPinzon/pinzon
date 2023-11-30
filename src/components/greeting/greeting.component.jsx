@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
+
 import { GreetingContainer } from "./greeting.styles.jsx";
 
 const Greeting = () => {
+	const { t } = useTranslation();
 	return (
 		<GreetingContainer>
-			Hi there!
+			{t("home.greeting.greet")}
 			<br />
-			I'm Camilo Pinz&oacute;n
+			{t("home.greeting.introduce")}
 		</GreetingContainer>
 	);
 };

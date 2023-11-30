@@ -22,7 +22,7 @@ export const ReactPillsEn = [
 export const ReactPillsEs = [
 	{
 		id: "RT-1",
-		title: "First React Pill",
+		title: "First React ES",
 		preview_content: "<p>This is the <b>First</b> React Content</p>",
 		content: "<p>This is the <b>Main</b> content for the rt-1 pill",
 	},

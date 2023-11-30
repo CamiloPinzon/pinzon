@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import Button from "../button/button.component";
 import ProfilePicSrc from "../../assets/img/profile-pic.webp";
 import {
@@ -9,6 +11,7 @@ import {
 } from "./personal-info.styles.jsx";
 
 const PersonalInfo = () => {
+	const { t } = useTranslation();
 	const navigate = useNavigate();
 	const handleClick = () => {
 		navigate(`/contact`);
@@ -17,15 +20,11 @@ const PersonalInfo = () => {
 		<PersonalInfoContainer role="main">
 			<ProfilePic src={ProfilePicSrc} alt="profile pic" loading="lazy" />
 			<BioContainer>
-				<BioContent>
-					Self-taught and dedicated. A web developer with ability to assimilate
-					work under pressure and great facility for teamwork, no matter if it's
-					locally or remote. He brings his experience to find solutions for all
-					the possible problems that can happen in all the project stages and
-					brings calm to the customer.
-				</BioContent>
+				<BioContent>{t("home.personal.bio")}</BioContent>
 				<div>
-					<Button handleClick={handleClick}>Contact me</Button>
+					<Button handleClick={handleClick}>
+						{t("home.personal.contact")}
+					</Button>
 				</div>
 			</BioContainer>
 		</PersonalInfoContainer>

@@ -1,13 +1,14 @@
 import { useSelector } from "react-redux/es/hooks/useSelector.js";
+import { useTranslation } from "react-i18next";
 
 import { selectLanguage } from "../../store/language/language.selector.jsx";
 import SectionTitle from "../../components/section-title/section-title.component";
 import WorkItem from "../../components/work-item/work-item.component";
 import { worksEn, worksEs } from "../../data/work";
-
 import { WorkContainer, WorkItemsContainer } from "./work-page.styles.jsx";
 
 const WorkPage = () => {
+	const { t } = useTranslation();
 	const language = useSelector(selectLanguage);
 
 	const manageContent = () => {
@@ -22,7 +23,7 @@ const WorkPage = () => {
 	};
 	return (
 		<WorkContainer>
-			<SectionTitle>Some of my work</SectionTitle>
+			<SectionTitle>{t("work.title")}</SectionTitle>
 			<WorkItemsContainer>{manageContent()}</WorkItemsContainer>
 		</WorkContainer>
 	);
