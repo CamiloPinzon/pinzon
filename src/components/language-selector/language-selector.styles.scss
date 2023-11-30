@@ -1,0 +1,10 @@
+.language-selector {
+    color: white;
+    background-color: #07020D;
+    border: none;
+    font-size: 15px;
+
+    &:focus {
+        border: none;
+    }
+}

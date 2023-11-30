@@ -4,6 +4,8 @@ import i18next from "../../i18n";
 import { setLanguage } from "../../store/language/language.actions";
 import { selectLanguage } from "../../store/language/language.selector";
 
+import "./language-selector.styles.scss";
+
 const LanguageSelector = () => {
 	const dispatch = useDispatch();
 	const selectedLanguage = useSelector(selectLanguage);
@@ -13,7 +15,11 @@ const LanguageSelector = () => {
 		i18next.changeLanguage(e.target.value);
 	};
 	return (
-		<select defaultValue={selectedLanguage} onChange={chooseLanguage}>
+		<select
+			className="language-selector"
+			defaultValue={selectedLanguage}
+			onChange={chooseLanguage}
+		>
 			<option value="en">English</option>
 			<option value="es">Español</option>
 		</select>
