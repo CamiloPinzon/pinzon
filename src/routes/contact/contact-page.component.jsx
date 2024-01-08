@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import SectionTitle from "../../components/section-title/section-title.component";
 import FormInput from "../../components/formInput/form-input.component";
 import Button from "../../components/button/button.component";
 import { addContactMessage } from "../../utils/firebase/firebase.utils";
+import { toggleAlert } from "../../store/alerts/alerts.actions.jsx";
+import { selectIsOpen } from "../../store/alerts/alerts.selector.jsx";
 
 import { ContactContainer, FormContainer } from "./contact-page.styles.jsx";
 
@@ -19,6 +22,8 @@ const ContactPage = () => {
 	const { t } = useTranslation();
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { name, email, message } = formFields;
+	const isAlertOpen = useSelector(selectIsOpen);
+	const dispatch = useDispatch();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -29,6 +34,7 @@ const ContactPage = () => {
 		switch (success) {
 			case true:
 				setFormFields(defaultFormFields);
+				dispatch(toggleAlert(!isAlertOpen));
 				break;
 			default:
 				console.log("Error with contact");
