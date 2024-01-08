@@ -35,6 +35,7 @@ const ContactPage = () => {
 			case true:
 				setFormFields(defaultFormFields);
 				dispatch(toggleAlert(!isAlertOpen));
+				window.scrollTo({ top: 0, behavior: "smooth" });
 				break;
 			default:
 				console.log("Error with contact");
