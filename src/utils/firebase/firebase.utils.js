@@ -24,6 +24,6 @@ export const addContactMessage = async (messageData) => {
 	batch.set(docRef, messageData);
 	await batch
 		.commit()
-		.then(() => ToggleAlertModal())
+		.then(() => console.log("Clear fields"))
 		.catch((error) => console.error(`Error: ${error}`));
 };
