@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { collection, writeBatch, getFirestore, doc } from "firebase/firestore";
-import { ToggleAlertModal } from "../alerts.utils";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyBIz71XTPGNRXOsCt6su7RQVlSKtl4HRFk",
@@ -24,6 +23,6 @@ export const addContactMessage = async (messageData) => {
 	batch.set(docRef, messageData);
 	await batch
 		.commit()
-		.then(() => console.log("Clear fields"))
-		.catch((error) => console.error(`Error: ${error}`));
+		.then(() => true)
+		.catch((error) => error);
 };

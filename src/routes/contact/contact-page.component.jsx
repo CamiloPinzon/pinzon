@@ -25,10 +25,22 @@ const ContactPage = () => {
 		setFormFields({ ...formFields, [name]: value });
 	};
 
+	const handleAlert = (success) => {
+		switch (success) {
+			case true:
+				setFormFields(defaultFormFields);
+				break;
+			default:
+				console.log("Error with contact");
+				break;
+		}
+	};
+
 	const submitHandler = (e) => {
 		e.preventDefault();
-		addContactMessage(formFields);
+		addContactMessage(formFields) ? handleAlert(true) : handleAlert(false);
 	};
+
 	return (
 		<ContactContainer>
 			<SectionTitle>{t("contact.title")}</SectionTitle>
