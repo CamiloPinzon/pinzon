@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, writeBatch, getFirestore, doc } from "firebase/firestore";
+import { ToggleAlertModal } from "../alerts.utils";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyBIz71XTPGNRXOsCt6su7RQVlSKtl4HRFk",
@@ -21,9 +22,8 @@ export const addContactMessage = async (messageData) => {
 	const batch = writeBatch(db);
 	const docRef = doc(collectionRef);
 	batch.set(docRef, messageData);
-	try {
-		await batch.commit();
-	} catch (error) {
-		console.log("saved data:", error);
-	}
+	await batch
+		.commit()
+		.then(() => ToggleAlertModal())
+		.catch((error) => console.error(`Error: ${error}`));
 };

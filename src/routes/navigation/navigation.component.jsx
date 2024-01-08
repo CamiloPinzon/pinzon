@@ -1,6 +1,9 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux/es/hooks/useSelector.js";
 
+import Alerts from "../../components/alerts/alerts.component.jsx";
+import { selectIsOpen } from "../../store/alerts/alerts.selector.jsx";
 import LanguageSelector from "../../components/language-selector/language-selector.component.jsx";
 import Footer from "../../components/footer/footer.component";
 
@@ -13,8 +16,10 @@ import {
 
 const Navigation = () => {
 	const { t } = useTranslation();
+	const isAlertOpen = useSelector(selectIsOpen);
 	return (
 		<>
+			{isAlertOpen && <Alerts />}
 			<NavigationContainer role="menu">
 				<Logo>
 					<NavLink to="/" role="menuitem">

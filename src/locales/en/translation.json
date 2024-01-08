@@ -1,5 +1,8 @@
 {
     "current-files-language": "en",
+    "alerts":{
+        "successForm": "Message sended successfully."
+    },
     "nav": {
         "home": "Home",
         "work": "Work",
