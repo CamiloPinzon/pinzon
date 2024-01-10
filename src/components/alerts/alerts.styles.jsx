@@ -3,11 +3,15 @@ import styled from "styled-components";
 import { success } from "../../colors";
 
 export const AlertContainer = styled.div`
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 55px;
 	background: ${success};
+	z-index: 2;
 	& > * {
 		width: calc(100% / 3);
 	}
