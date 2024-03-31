@@ -5,7 +5,6 @@ import { black, aero } from "../../colors";
 
 export const NavigationContainer = styled.div`
 	background-color: ${black};
-	padding: 30px 50px;
 	margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
@@ -13,36 +12,37 @@ export const NavigationContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 30px;
+	height: 80px;
+	padding: 30px;
 `;
+
+export const LinksContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	row-gap: 10px;
+`;
+
 export const LinkItem = styled(NavLink)`
+	display: flex;
+	flex-direction: row;
+	column-gap: 10px;
 	margin-inline: 10px;
 	text-decoration: none;
 	font-weight: bold;
 	color: white;
 	padding-bottom: 5px;
 	transition: all 0.2s ease-in;
+	padding-bottom: 3px;
 
-	&.active {
+	&::after {
+		transition: transform 0.3s ease;
+		transform: scaleX(0);
+		transform-origin: 0 0;
+	}
+
+	&.active,
+	&:hover {
 		color: ${aero};
-		border-bottom: 3px solid ${aero};
+		transform: scaleX(1);
 	}
-`;
-
-export const Logo = styled.div`
-	a {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		text-decoration: none;
-		color: white;
-		font-weight: bold;
-		font-size: 1.5rem;
-	}
-`;
-
-export const LogoIcon = styled.div`
-	color: ${aero};
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 `;

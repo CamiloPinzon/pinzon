@@ -4,11 +4,11 @@ import SkillsInfo from "../../components/skills-info/skills-info.component";
 
 const HomePage = () => {
 	return (
-		<div className="home-container">
+		<main>
 			<Greeting />
 			<PersonalInfo />
 			<SkillsInfo />
-		</div>
+		</main>
 	);
 };
 

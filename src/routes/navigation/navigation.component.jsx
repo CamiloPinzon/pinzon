@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux/es/hooks/useSelector.js";
 
@@ -7,11 +7,15 @@ import { selectIsOpen } from "../../store/alerts/alerts.selector.jsx";
 import LanguageSelector from "../../components/language-selector/language-selector.component.jsx";
 import Footer from "../../components/footer/footer.component";
 
+/*import { FaHome } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
+import { CgPill } from "react-icons/cg";
+import { GrContact } from "react-icons/gr";*/
+
 import {
 	NavigationContainer,
+	LinksContainer,
 	LinkItem,
-	Logo,
-	LogoIcon,
 } from "./navigation.styles.jsx";
 
 const Navigation = () => {
@@ -21,18 +25,7 @@ const Navigation = () => {
 		<>
 			{isAlertOpen && <Alerts />}
 			<NavigationContainer role="menu">
-				<Logo>
-					<NavLink to="/" role="menuitem">
-						<LogoIcon>
-							<div>{`<`}</div>
-							<div>{`/`}</div>
-							<div>{`>`}</div>
-						</LogoIcon>
-						&nbsp;&nbsp;
-						<span className="logo-name">camilo pinzón</span>
-					</NavLink>
-				</Logo>
-				<div className="links-container">
+				<LinksContainer>
 					<LinkItem to="/" role="menuitem">
 						{t("nav.home")}
 					</LinkItem>
@@ -45,7 +38,7 @@ const Navigation = () => {
 					<LinkItem to="contact" role="menuitem">
 						{t("nav.contact")}
 					</LinkItem>
-				</div>
+				</LinksContainer>
 				<div className="language-selector-container">
 					<LanguageSelector />
 				</div>

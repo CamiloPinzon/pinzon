@@ -5,7 +5,7 @@ export const JavascripPillsEn = [
 		preview_content:
 			"What is Javascript engine? How is the JS code interpreted by the computer?",
 		content: `
-		<article><p>Imagine that you're in a country where the people don´t speak any known language. How do you ask someone for any task? Well, this problem exist when you pass any javascript code to the computer, they don't know how to read or interpret it and this is the reason for the Javascript engine, basically the javascript engine it's a translator that convert the javascript code to to machine language to be interpreted.</p>
+		<article><p>Imagine that you're in a country where the people don't speak any known language. How do you ask someone for any task? Well, this problem exist when you pass any javascript code to the computer, they don't know how to read or interpret it and this is the reason for the Javascript engine, basically the javascript engine it's a translator that convert the javascript code to to machine language to be interpreted.</p>
 		<p>Now days exist a lot of js engines some of the most popular are:
 			<ul>
 				<li><a href="https://spidermonkey.dev" rel="noopener" target="_blank">SpiderMonkey</a>: first js engine, developed by Brendan Eich in 1995 when he was working for Netscape, currently this engine is used by firefox</li>
