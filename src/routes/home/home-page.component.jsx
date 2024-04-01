@@ -8,11 +8,8 @@ const HomePage = () => {
 	return (
 		<main>
 			<Helmet>
-				<title>Camilo Pinzón - Web Developer | Freelancer</title>
-				<meta
-					name="title"
-					content="Camilo Pinzón - Web Developer | Freelancer"
-				/>
+				<title>Cani Pinzón - Web Developer | Freelancer</title>
+				<link rel="canonical" href="https://www.camilopinzon.tech/" />
 				<meta
 					name="description"
 					content="Self-taught and dedicated web developer, React JS, TypeScript, JavaScript, CSS, HTML and more."
