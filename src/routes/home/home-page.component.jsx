@@ -8,7 +8,7 @@ const HomePage = () => {
 	return (
 		<main>
 			<Helmet>
-				<title>Cani Pinzón - Web Developer | Freelancer</title>
+				<title>Camilo Pinzón - Web Developer | Freelancer</title>
 				<link rel="canonical" href="https://www.camilopinzon.tech/" />
 				<meta
 					name="description"
