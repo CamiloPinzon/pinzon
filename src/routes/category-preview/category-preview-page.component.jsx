@@ -23,7 +23,6 @@ const CategoryPreviewPage = () => {
 	useEffect(() => {
 		const pills = GetPills(cat, language);
 		dispatch(setSelectedPills(pills));
-		console.log(pills);
 	}, [cat, dispatch, language]);
 	const { t } = useTranslation();
 	return (

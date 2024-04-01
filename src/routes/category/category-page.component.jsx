@@ -5,10 +5,12 @@ import PillPage from "../pill/pill-page.content";
 
 const CategoryPage = () => {
 	return (
-		<Routes>
-			<Route index element={<CategoryPreviewPage />} />
-			<Route path=":pill" element={<PillPage />} />
-		</Routes>
+		<>
+			<Routes>
+				<Route index element={<CategoryPreviewPage />} />
+				<Route path=":pill" element={<PillPage />} />
+			</Routes>
+		</>
 	);
 };
 

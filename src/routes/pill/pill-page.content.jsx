@@ -17,13 +17,19 @@ import { PillContainer } from "./pill-page.styles.jsx";
 const PillPage = () => {
 	const dispatch = useDispatch();
 	const { pill } = useParams();
+	const path = useParams();
+	const category = useSelector(selectSelectedCategory);
+	const language = useSelector(selectLanguage);
+	const cat = path.category.toUpperCase();
 	const urlCategory = pill.substring(
 		pill.indexOf("=") + 1,
 		pill.lastIndexOf("-")
 	);
+	useEffect(() => {
+		const pills = GetPills(cat, language);
+		dispatch(setSelectedPills(pills));
+	}, [cat, language, dispatch]);
 	const pillId = pill.substring(pill.indexOf("=") + 1);
-	const category = useSelector(selectSelectedCategory);
-	const language = useSelector(selectLanguage);
 
 	useEffect(() => {
 		switch (urlCategory) {
@@ -51,14 +57,18 @@ const PillPage = () => {
 		}
 	}, [dispatch, language, urlCategory]);
 
+	console.log("Category", category);
 	const pillSelected = category.find((pill) => pill.id === pillId);
+	console.log("Pill selected", pillSelected);
 	dispatch(setSelectedPill(pillSelected));
-	const { title = "", content = "" } = useSelector(selectSelectedPill);
+	console.log("Title", pillSelected.title);
+	//const { title = "", content = "" } = pillSelected;
 
 	return (
 		<PillContainer>
-			<h2>{title}</h2>
-			<div dangerouslySetInnerHTML={{ __html: content }}></div>
+			<div>Pill container</div>
+			{/*<h2>{title}</h2>
+			<div dangerouslySetInnerHTML={{ __html: content }}></div>*/}
 		</PillContainer>
 	);
 };
