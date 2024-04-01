@@ -15,7 +15,7 @@ const HomePage = () => {
 				/>
 				<meta
 					name="description"
-					content="Self-taught and dedicated. A web developer with ability to assimilate work under pressure and great facility for teamwork, no matter if it's locally or remote. He brings his experience to find solutions for all the possible problems that can happen in all the project stages and brings calm to the customer."
+					content="Self-taught and dedicated web developer, React JS, TypeScript, JavaScript, CSS, HTML and more."
 				/>
 			</Helmet>
 			<Greeting />
